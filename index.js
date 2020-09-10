@@ -94,10 +94,13 @@ console.log(reviews[8]);
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
 
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
-console.log(reviews[7]);
+
+console.log(reviews[7].feedback);
 
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
+
+
 
  Your function should take two arguments:
 
@@ -111,7 +114,11 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
     /* code here */
+    return reviews[index];
   }
+
+
+console.log(getReviewByIndex(reviews, 0));
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
