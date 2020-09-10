@@ -67,8 +67,9 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
-// console.log(reviews[5].feedback);
+console.log(reviews[5].feedback);
 
+//function to return feedback from objectArray
 function getFeedback(object, reviewerName) {
   for (i = 0; i < object.length; i++) {
     if (object[i].name.toLowerCase() === reviewerName.toLowerCase()) {
@@ -114,7 +115,7 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
     /* code here */
-    return reviews[index];
+    return `${reviews[index].name} gave the restaurant a ${reviews[index].rating}, and their feedback was: ${reviews[index].feedback}`;
   }
 
 
