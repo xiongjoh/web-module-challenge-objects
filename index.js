@@ -18,6 +18,7 @@ function createMenuItem(name, cost, category){
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
 const salad = createMenuItem("Ceasar Salad", 7, "Lunch");
 const softDrink = createMenuItem("Dr.Pepper", 1, "Drinks");
 const taco = createMenuItem("Taco", 3, "Lunch");
@@ -36,6 +37,20 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+burger.discount = function (str) {
+
+  if (str.toLowerCase() === "teacher" || str.toLowerCase() === "student") {
+    return this.price * .75;
+  }
+  else if (str.toLowerCase() === "public") {
+    return this.price * .9;
+  }
+  else {
+    return this.price;
+  }
+}
+
+console.log(burger.discount("teacher"));
 
 
 ///////////////Reviews (MVP)///////////////////
