@@ -67,6 +67,19 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+// console.log(reviews[5].feedback);
+
+function getFeedback(object, reviewerName) {
+  for (i = 0; i < object.length; i++) {
+    if (object[i].name.toLowerCase() === reviewerName.toLowerCase()) {
+      return object[i].feedback;
+    }
+  }
+  return "No feedback found.";
+}
+
+console.log(getFeedback(reviews, 'Julius'));
+
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
