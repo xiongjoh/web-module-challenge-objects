@@ -165,7 +165,7 @@ console.log(getLastReview(reviews));
     return newObjectArray;
   }
 
-  console.log(getReviewByRating(reviews, 4));
+console.log(getReviewByRating(reviews, 4));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
@@ -180,10 +180,20 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
+  function getLongReviews(objectArray) {
     /* code here */
+    let newObjectArray = [];
+    for (let i = 0; i < objectArray.length ; i++)
+    {
+      if (objectArray[i].feedback.split(' ').length > 15) {
+        newObjectArray.push(objectArray[i]);
+      } 
+    }
+    return newObjectArray;
+
   }
-  
+
+console.log(getLongReviews(reviews));
 
 /* STRETCH 3:  This challenge is not related to the data above! 
 
